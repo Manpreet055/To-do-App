@@ -50,7 +50,10 @@ function addTask() {
     inputData.value = "";
     return;
   }
-  let taskObj = { isDone: false, taskContent: inputData.value.trim() };
+  let taskObj = {
+    isDone: false,
+    taskContent: capitalize(inputData.value.trim()),
+  };
   storedTasks.push(taskObj);
   localStorage.setItem("storedTasks", JSON.stringify(storedTasks));
   createTaskElement(taskObj);
@@ -93,3 +96,7 @@ darkMode.addEventListener("click", () => {
     document.body.classList.contains("darkMode")
   );
 });
+function capitalize(str) {
+  if (!str) return;
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
