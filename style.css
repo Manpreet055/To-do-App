@@ -83,11 +83,13 @@ body {
   grid-template-columns: 10% 1fr 65px 65px;
   font-size: 18px;
   overflow-x: auto;
+  place-items:center ;
 }
 .checkbox {
   border-radius: 50%;
 }
 .textData {
+  place-self: start;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -98,7 +100,6 @@ body {
 .editTask {
   width: 50px;
   height: 100%;
-  justify-self: center;
   border-radius: 10px;
   border: none;
   background-color: #017ebc;
