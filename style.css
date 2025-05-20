@@ -78,7 +78,7 @@ body {
   padding-left: 15px;
   align-items: center;
   white-space: nowrap;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: grid;
   grid-template-columns: 10% 1fr 65px 65px;
   font-size: 18px;
