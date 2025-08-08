@@ -83,7 +83,7 @@ body {
   grid-template-columns: 10% 1fr 65px 65px;
   font-size: 18px;
   overflow-x: auto;
-  place-items:center ;
+  place-items: center;
 }
 .checkbox {
   border-radius: 50%;
