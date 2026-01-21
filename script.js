@@ -26,7 +26,7 @@ function createTaskElement(taskObj) {
   tasks.appendChild(newTask);
   checkbox.addEventListener("change", () => {
     let targetTask = storedTasks.find(
-      (task) => task.taskContent === textData.textContent
+      (task) => task.taskContent === textData.textContent,
     );
     if (targetTask) {
       targetTask.isDone = checkbox.checked;
@@ -43,7 +43,7 @@ function addTask() {
     return;
   }
   let duplicateCheck = storedTasks.some(
-    (task) => task.taskContent.trim() === inputData.value.trim()
+    (task) => task.taskContent.trim() === inputData.value.trim(),
   );
   if (duplicateCheck) {
     alert("Task already exists");
@@ -79,7 +79,7 @@ tasks.addEventListener("click", (event) => {
     let textData = clickTask.querySelector(".textData");
     inputData.value = textData.textContent;
     storedTasks = storedTasks.filter(
-      (task) => task.taskContent !== textData.textContent
+      (task) => task.taskContent !== textData.textContent,
     );
     localStorage.setItem("storedTasks", JSON.stringify(storedTasks));
     clickTask.remove();
@@ -93,7 +93,7 @@ darkMode.addEventListener("click", () => {
   document.body.classList.toggle("darkMode");
   localStorage.setItem(
     "darkModePrefrence",
-    document.body.classList.contains("darkMode")
+    document.body.classList.contains("darkMode"),
   );
 });
 function capitalize(str) {
