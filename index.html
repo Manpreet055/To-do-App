@@ -19,34 +19,23 @@
   </head>
   <body>
     <div class="container">
-      <h2 class="heading">To-Do App</h2>
-      <input
-        class="inputField"
-        type="text"
-        placeholder="Add a new Task"
-        required
-      />
-      <button class="addTask">+ Add</button>
-      <nav class="navIcons">
-        <div></div>
-        <select class="sortFilter" name="Sorting" id="sort">
-          <option value="ascending">A-Z</option>
-          <option value="descending">Z-A</option>
-          <option value="newest">Newest</option>
-          <option value="Oldest">Oldest</option>
-        </select>
-        <select class="sortFilter" name="Filter" id="filter">
-          Filter
-          <option value="ShowAllTasks">All</option>
-          <option value="pending">pending</option>
-          <option value="completed">Done</option>
-        </select>
-        <button class="darkModeButton">Dark/Light</button>
-      </nav>
-      <div class="tasks"><div class="taskContainer"></div></div>
+      <h2 class="heading">
+        To-Do App
+        <button class="darkModeButton"></button>
+      </h2>
+      <div class="navIcons">
+        <input
+          class="inputField"
+          type="text"
+          placeholder="Add a new Task"
+          required
+        />
+        <button class="addTask">+ Add</button>
+      </div>
+      <div class="tasks"></div>
     </div>
     <script type="module" src="script.js"></script>
     <script src="./utils/darkMode.js" type="module"></script>
-    <script src="./utils/tasksEventListener.js" type="module"></script>
+    <script src="./utils/eventListener.js" type="module"></script>
   </body>
 </html>

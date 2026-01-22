@@ -10,15 +10,16 @@ tasks.addEventListener("click", (event) => {
     storedTasks = storedTasks.filter((task) => task.taskContent !== taskText);
     localStorage.setItem("storedTasks", JSON.stringify(storedTasks));
   }
+
+  // Edit task functionality
   if (event.target.closest(".editTask")) {
-    if (!confirm("Are you sure ?")) return;
     let clickTask = event.target.closest(".newTask");
     let textData = clickTask.querySelector(".textData");
     inputData.value = textData.textContent;
+    localStorage.setItem("storedTasks", JSON.stringify(storedTasks));
     storedTasks = storedTasks.filter(
       (task) => task.taskContent !== textData.textContent,
     );
-    localStorage.setItem("storedTasks", JSON.stringify(storedTasks));
     clickTask.remove();
   }
 });
